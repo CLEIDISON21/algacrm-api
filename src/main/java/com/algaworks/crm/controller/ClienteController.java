@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
 import com.algaworks.crm.model.Cliente;
@@ -18,6 +19,7 @@ import com.algaworks.crm.repository.ClienteRepository;
 
 @RestController
 @RequestMapping("/clientes")
+@CrossOrigin(origins = "*")
 public class ClienteController {
     
     @Autowired
