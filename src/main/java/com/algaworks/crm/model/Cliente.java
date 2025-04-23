@@ -6,7 +6,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
-
 @Entity
 public class Cliente {
 
@@ -16,6 +15,9 @@ public class Cliente {
 
     @Column(nullable = false)
     private String nome;
+
+    @Column(length = 20)
+    private String telefone;
 
     public Long getId() {
         return id;
@@ -31,6 +33,14 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     @Override
@@ -57,7 +67,4 @@ public class Cliente {
             return false;
         return true;
     }
-
-    
-
 }
